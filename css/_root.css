@@ -1,0 +1,59 @@
+/* Для описания используемых переменных */
+:root {
+  --white: #fff;
+  --dark: #333333;
+  --black: #000000; /*шапка и футер*/
+  --dark-lite:#585858;
+  --color-night-rider: #333; /*текст*/
+  --color-amethyst: #9d5cd0; /* в событиях Подробнее в блоке editions фон цены, обрамление кнопок*/
+  --color-vl-grey: #CACACA;
+  --color-whisper:#ececec; /*nav-btn -slider*/
+  --color-pink-swan: #b6b6b6;
+  --color-studio: #7943a4; /* для состояния active в выпадающих списках */
+  --color-nobel: #999999; /*блеклый текст */
+  --color-wisteria: #c283f3; /* кнопки, выделения, в блоке editions кнопка выбора в категориях */
+  --color-dim-gray: #666;
+  --color-mauve: #d1a9f0;
+  --color-lime-green: #30bf39;
+  --color-pink-sw: #b7b7b7;
+  --color-dark-gray: #b0b0b0;
+  --color-can-can: #d88f99;
+  --color-whisp : #eaeaea;
+  --color-harley-davidson-orange : #d11616;
+  --color-nero: #161616;
+  --color-unactive: #bbbbbb;
+  --transparent-dark-4:rgba(0, 0, 0, 0.4);
+  --transparent-dark-5:rgba(0, 0, 0, 0.5);
+  --transparent-dark-6:rgba(0, 0, 0, 0.6);
+  --transparent-dark-9:rgba(0, 0, 0, 0.9);
+  --transparent-rose:rgba(194, 131, 243, 0.4);
+  --white-transparent-2: rgba(255, 255, 255, 0.2);
+  --violet-transparent-7:rgba(157, 92, 208, 0.7);
+  --dark-grey-05: rgba(102,  102, 102, 0.5);
+  
+  --background-helper:  #926B88;
+
+
+/* sizes */
+
+--container-max: 1700px;
+--container-padding: 50px;
+--burger-line:3px;
+
+/* transitions */
+
+--short:0.3s;
+--middle: .5s;
+
+}
+
+@media (max-width: 610px) {
+  :root{
+    --container-padding: 15px;
+  }
+
+}
+
+
+
+

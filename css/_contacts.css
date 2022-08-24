@@ -1,0 +1,465 @@
+.contacts {
+  border-top: 1px solid var(--color-dark-gray);
+}
+
+.contacts__container {
+  padding-top: 30px;
+  padding-bottom: 18px;
+}
+
+.contacts__wraper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contacts__adress {
+  margin-top: 13px;
+}
+
+.contacts__menu  {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(920 / 1600 * 100%);
+}
+
+.contacts__form {
+  width: 100%;
+}
+
+.contacts__messengers{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 276px;
+}
+
+.messengers__list{
+  margin: 0;
+  display: flex;
+  padding: 0;
+}
+
+.messengers__title {
+  margin-bottom: 0;
+
+}
+
+.contacts__title {
+    margin-bottom: 3px;
+    color: var(--color-night-rider);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.contacts__location {
+    color: var(--color-night-rider);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+.contacts-form__label {
+  display: inline-flex;
+  flex-direction: column-reverse;
+  max-width: 453px;
+  margin-bottom: 12px;
+  margin-right: 16px;
+}
+   
+.contacts-form__input {
+height: 50px;
+width: 269px ;
+padding: 9px 23px;
+border-radius: 100px;
+border: 1px solid var(--color-night-rider);
+transition: background-color 0.3s ease-in-out;
+}
+
+.label-invalid.just-validate-error-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 23px;
+}
+
+
+.contacts-form__input.invalid {
+  border-color: var(--color-harley-davidson-orange);
+}
+
+.contacts-form__input:hover,
+.contacts-form__input:focus
+ {
+  background-color: var(--color-whisper);
+}
+
+.contacts-form__input::placeholder {
+color: var(--color-nobel);
+font-weight: normal;
+font-size: 16px;
+line-height: 32px;
+}
+
+.contacts-form__input:focus-visible {
+outline: none;
+background-color: var(--color-whisper);
+}
+
+.contacts-form__input:active {
+background-color: transparent;
+}
+
+.contacts-form__btn-text {
+  visibility: visible;
+}
+
+.contacts-form__btn {
+  padding: 11px 33px;
+  color: var(--color-amethyst);
+  font-size: 18px;
+  line-height: 25px;
+  border: 2px solid var(--color-amethyst);
+  margin-bottom: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition-property: color, border-color, background-color;
+  transition-duration: var(--short);
+  transition-timing-function: ease-in-out;
+}
+
+.contacts-form__btn::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 2px solid var(--color-wisteria);
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contacts-form__btn:hover {
+  color: var(--white);
+  background-color: var(--color-studio);
+  border-color: currentColor;
+}
+
+.contacts-form__btn:focus-visible{
+  outline: none;
+}
+
+.contacts-form__btn:focus-visible::after {
+  opacity: 1;
+}
+
+
+.contacts-form__btn:active {
+  color: var(--white);
+  outline: 3px solid var(--color-mauve);
+  background-color: var(--color-studio);
+}
+
+.messengers__title {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  color: var(--color-night-rider);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.messengers__list {
+display: flex;
+}
+
+.messengers__item:first-child {
+  margin-right: 21px;
+}
+
+.messengers__link {
+display: flex;
+width: 40px;
+height: 40px;
+border-radius: 100%;
+box-shadow: 0 0 0 1px transparent;
+opacity: 1;
+transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.messengers__link:focus-visible {
+outline: none;
+opacity: 0.6;
+}
+
+.messengers__link:active {
+box-shadow: 0 0 0 1px #9643A4;
+opacity: 1;
+}
+
+.messengers__link-svg:hover,
+.messengers__link-svg:focus  {
+  opacity: 0.5;
+  outline: none;
+}
+
+.messengers__link-svg:active {
+  outline: 1px solid var(--color-amethyst);
+  border-radius: 100%;
+}
+
+
+.contacts__map {
+  position: relative;
+  height: 700px;
+  border-top: 1px solid var(--color-dark-gray);
+}
+
+.contacts__map-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+
+@media (max-width: 1700px) {
+
+  .contacts__menu {
+    width: 100%;
+  }
+
+  .contacts-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+  
+@media (max-width: 1100px) {
+
+  .contacts__container {
+    padding-top: 31px;
+    padding-bottom: 41px;
+  }
+
+  .contacts__adress {
+    margin-bottom: 10px;
+  }
+
+  .contacts__location {
+    margin-bottom: 12px;
+  }
+  
+  .contacts__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .contacts-form__btn {
+    align-self: flex-start;
+    padding: 9px 41px;
+  }
+
+  .contacts-form__label {
+    margin-bottom: 12px; 
+    margin-right: 21px;
+  }
+
+  .messengers__title {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 920px) {
+
+  .contacts__container {
+    padding-top: 39px;
+    padding-bottom: 45px;
+  }
+
+  .contacts-form__label:nth-child(2n) {
+    margin-bottom: 12px; 
+    margin-right: 0;
+  }
+
+  .contacts__adress {
+    margin: 0;
+  }
+
+  .contacts__title {
+    margin-bottom: 3px;
+    color: var(--color-night-rider);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .contacts__location {
+    color: var(--color-night-rider);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    margin-top: 0;
+  }
+
+  .contacts-form__input {
+  height: 50px;
+  width: 323px ;
+  }
+
+  .contacts-form__btn{
+    width: 319px;
+    padding: 11px 22px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .messengers__title {
+    margin-top: 27px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .contacts-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .contacts-form__input {
+    height: 40px;
+    width: 100% ;
+  }
+}
+ 
+@media (max-width: 620px) {
+  
+  .contacts-form__label {
+    display: block;
+    width: 100%;
+  }
+
+  .contacts-form__btn{
+    height: 40px;
+    width: 128px;
+    padding: 5px;
+  }
+
+  .contacts-form__btn-text {
+    display: none;
+  }
+  
+  .contacts__map {
+    height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .contacts {
+    border-top: none;
+  }
+
+  .contacts__container {
+    padding-top: 31px;
+    padding-bottom: 23px;
+  }
+
+  .contacts__title {
+    margin-bottom: -1px;
+    color: var(--color-night-rider);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .contacts-form__label {
+    margin-bottom: 18px;
+    margin-right: 21px;
+  }
+
+  .contacts-form__label:nth-child(2n) {
+    margin-bottom: 21px; 
+    margin-right: 0;
+  }
+
+  .contacts-form__btn {
+    align-self: flex-start;
+    padding: 6px 33px;
+    color: var(--color-amethyst);
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  .messengers__title {
+    margin-top: 18px;
+  }
+
+  .messengers__link {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px transparent;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .messengers__link-svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contacts__location {
+    color: var(--color-night-rider);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    margin-bottom: 13px;
+    margin-right: 15px;
+    margin-top: 0;
+  }
+
+  .contacts-form__label {
+    padding: 0;
+  }
+  
+  .messengers__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .contacts__map {
+    border-top: none;
+  }
+}
+
