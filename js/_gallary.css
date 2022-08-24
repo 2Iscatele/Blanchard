@@ -1,0 +1,367 @@
+.gallary {
+  color: var(--white);
+  background-color: var(--black);
+  background-image: url(../../img/gallery.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallary__container {
+  padding-top: 82px;
+  padding-bottom: 79px;
+  height: 100%;
+}
+   
+.gallary__content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallary__filter {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallary__left {
+  display: flex;
+  flex-direction: column;
+  width: calc(400 / 1600 * 100%);
+}
+
+.gallary__left-bottom {
+  margin-top: auto;
+}
+
+.gallary__slider {
+  width: calc(1150 / 1600 * 100%);
+  margin-right: 0;
+  padding-top: 18px;
+}
+
+.gallary__slides-container {
+  overflow: hidden;
+}
+
+.gallary__nav {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 27px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.gallary__pagination {
+  margin-right: 18px;
+  text-align: center;
+}
+  
+.gallary__prev {
+  margin-right: 20px;
+}
+
+.gallary__slide {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-helper);
+}
+
+.gallary__slide::before {
+  content: "";
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: calc(100% - 6px);
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: background-color .3s ease, border-color .3s ease;
+}
+  
+.gallary__slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  opacity: 0;
+  background-color: var(--transparent-dark-5);
+  background-image: url("../img/loop_plus.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: center top 46%;
+  background-clip: content-box;
+  transition: opacity .5s ease;
+}
+
+.gallary__slide:hover::after {
+  opacity: 1;
+}
+
+.gallary__slide:focus {
+  outline: none;
+}
+
+.gallary__slide:focus::before {
+  border-color: var(--color-studio);
+}
+
+.gallary__slide:active::before {
+  border-color: var(--color-mauve);
+  background-color: var(--transparent-rose);
+}
+
+.gallary__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallary__filter-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.categories__list{
+  margin: 0;
+  padding-left: 0;
+  text-decoration-style: none;
+}
+
+.categories__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories__label {
+  color: var(--color-white);
+}
+
+.categories__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.categories__name {
+  position: relative;
+  display:flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  transition: color 0.3s ease-in-out;
+}
+
+.categories__input:checked + .categories__name {
+  color: var(--color-wisteria);
+}
+  
+  .categories__name::before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid currentColor;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .categories__input:checked + .categories__name::before {
+    border-color: var(--color-wisteria);
+  }
+  
+  .categories__name::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: var(--color-wisteria);
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .categories__input:checked + .categories__name::after {
+    opacity: 1;
+  }
+  
+  .categories__input:focus-visible + .categories__name {
+    color: var(--color-wisteria);
+  }
+  
+  .categories__close-btn {
+    display: none;
+  }
+
+  /* Адаптивная высота слайда регулируется относительно его ширины с помощью padding-top в
+   % для псевдоэлемента ::before */
+  
+@media (max-width: 1280px) {
+
+  .gallary__slider {
+    width: calc(594 / 924 * 100%);
+  }
+
+  .gallary__slide::before {
+    content: "";
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-top: calc(110% - 6px);
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+
+  .gallary__left {
+    width: calc(280 / 924 * 100%);
+  }
+
+}
+
+
+@media (max-width: 1060px) {
+
+  .gallary__container {
+    padding-top: 82px;
+    padding-bottom: 86px;
+    height: 100%;
+  }
+
+  .gallary__left {
+    width: calc(280 / 925 * 100%);
+  }
+
+  .gallary__filter-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .gallary__categories {
+    margin-bottom: 26px;
+  }
+}
+  
+@media (max-width: 970px) {
+  .gallary__container {
+    padding-top: 82px;
+    padding-bottom: 61px;
+    height: 100%;
+  }
+
+  .gallary__left,
+  .gallary__slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallary__categories {
+    margin-bottom: 0;
+  }
+
+  .gallary__slider {
+    padding-top: 14px;
+  }
+
+  .gallary__slide::before {
+    padding-top: calc(103% - 6px);
+  }
+
+  .gallary__nav {
+    margin-bottom: 28px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gallary__left {
+    position: relative;
+    z-index: 11;
+  }
+
+  .gallary__filter {
+    max-width: 280px;
+  }
+  
+  .gallary__left-bottom {
+    padding-top: 40px;
+  }
+  
+  .gallary__select {
+    max-width: 300px;
+  }
+}
+  
+@media (max-width: 420px) {
+  .gallary {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+
+  .gallary__container {
+    padding-top: 0px;
+    padding-bottom: 30px;
+    height: 100%;
+  }
+
+  .gallary__filter {
+    max-width: 100%;
+  }
+
+  .gallary__filter .gallary__filter-title {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 5px;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .gallary__left-bottom {
+    padding-top: 31px;
+}
+
+  .gallary__prev,
+  .gallary__pagination {
+    margin-right: 15px;
+  }
+
+  .gallary__slider {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 18px;
+    padding-top: 10px;
+  }
+
+  .gallary__slide .gallary__slide::before {
+    padding-top: calc(83% - 6px);
+  }
+  
+  .gallary__nav {
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .gallary__slides-container {
+    margin-bottom: 20px;
+  }
+  
+  .gallary__slide::before {
+    padding-top: calc(367 / 290 * 100% - 6px);
+  }
+}
