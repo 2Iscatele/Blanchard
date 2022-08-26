@@ -1,0 +1,11 @@
+.DS_Store
+.editorconfig
+/*.jpg
+/*.png
+/*.txt
+/img/new/*.*
+/img/old/*.*
+/docs
+/css/components/_media.css.old
+/css/components/_media_tooltips.css
+settings.json
