@@ -1,0 +1,26 @@
+.us {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.us__descr {
+  max-width: 1080px;
+}
+  
+
+
+@media (max-width:1030px) {
+  .us {
+    padding-top: 78px;
+  }
+}
+
+@media (max-width:610px) {
+  .us {
+    padding-top: 50px;
+    padding-bottom: 21px;
+  }
+}
+
+  
+  
