@@ -1,7 +1,7 @@
 .gallary {
   color: var(--white);
   background-color: var(--black);
-  background-image: url(../../img/gallery.jpg);
+  background-image: url(../img/gallery.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
