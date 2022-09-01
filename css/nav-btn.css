@@ -89,7 +89,7 @@
 .nav-btn--big::before {
   width: 12px;
   height: 12px;
-  top:calc(50% - 15px / 2) ;
+  top:calc(50% - 12px / 2) ;
 }
 
 .nav-btn--next.nav-btn--big::before {
@@ -97,7 +97,7 @@
 }
 
 .nav-btn--prev.nav-btn--big::before {
-  left: calc(50% - 15px / 2);
+  left: calc(50% - 9px / 2);
 }
 
 .nav-btn--next::before {
